@@ -1,86 +1,76 @@
-/*====================================
- AJ WARRIOR Gaming Website
- script.js
-====================================*/
+/*==================================
+      AJ WARRIOR
+      script.js
+==================================*/
 
-// Loading Message
+// Website Loaded
 window.addEventListener("load", () => {
-    console.log("AJ WARRIOR Website Loaded Successfully!");
+    console.log("AJ WARRIOR Website Loaded Successfully");
 });
 
 // Smooth Scroll
-document.querySelectorAll("a").forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    link.addEventListener("click", function(e){
+    anchor.addEventListener("click", function(e) {
 
-        let target = this.getAttribute("href");
+        e.preventDefault();
 
-        if(target.startsWith("#")){
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
 
-            e.preventDefault();
+            behavior: "smooth"
 
-            document.querySelector(target).scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-        }
+        });
 
     });
 
 });
 
-// Button Hover Animation
+// Card Hover Animation
+const cards = document.querySelectorAll(".card");
 
-const buttons=document.querySelectorAll(".btn,.btn2");
+cards.forEach(card => {
 
-buttons.forEach(btn=>{
+    card.addEventListener("mouseenter", () => {
 
-btn.addEventListener("mouseenter",()=>{
+        card.style.transform = "translateY(-10px) scale(1.05)";
 
-btn.style.transform="scale(1.08)";
+    });
 
-});
+    card.addEventListener("mouseleave", () => {
 
-btn.addEventListener("mouseleave",()=>{
+        card.style.transform = "translateY(0px) scale(1)";
 
-btn.style.transform="scale(1)";
-
-});
-
-});
-
-// Card Animation
-
-const cards=document.querySelectorAll(".card");
-
-cards.forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.transform="translateY(-10px)";
+    });
 
 });
 
-card.addEventListener("mouseleave",()=>{
+// Button Click Animation
+const buttons = document.querySelectorAll(".btn, .btn2");
 
-card.style.transform="translateY(0px)";
+buttons.forEach(button => {
 
-});
+    button.addEventListener("click", () => {
+
+        button.style.transform = "scale(0.95)";
+
+        setTimeout(() => {
+
+            button.style.transform = "scale(1)";
+
+        },200);
+
+    });
 
 });
 
 // Logo Rotation
-
-const logo=document.querySelector(".logo img");
+const logo = document.querySelector(".logo img");
 
 if(logo){
 
 logo.addEventListener("mouseenter",()=>{
 
-logo.style.transition=".5s";
-
+logo.style.transition="0.6s";
 logo.style.transform="rotate(360deg)";
 
 });
@@ -93,32 +83,11 @@ logo.style.transform="rotate(0deg)";
 
 }
 
-// Hero Banner Glow
-
-const banner=document.querySelector(".hero-image img");
-
-if(banner){
-
-setInterval(()=>{
-
-banner.style.filter="drop-shadow(0 0 25px #8A2BE2)";
-
-setTimeout(()=>{
-
-banner.style.filter="none";
-
-},1000);
-
-},2000);
-
-}
-
-// Footer Year
-
+// Current Year
 const footer=document.querySelector("footer p");
 
 if(footer){
 
-footer.innerHTML=`© ${new Date().getFullYear()} AJ WARRIOR | Official Gaming Website`;
+footer.innerHTML=`© ${new Date().getFullYear()} AJ WARRIOR | All Rights Reserved`;
 
 }

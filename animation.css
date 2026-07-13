@@ -1,0 +1,217 @@
+/*=========================================
+ AJ WARRIOR
+ animation.css
+ Purple + Black Animation Effects
+=========================================*/
+
+/* Fade In */
+
+.fade-in{
+    opacity:0;
+    animation:fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+
+0%{
+    opacity:0;
+}
+
+100%{
+    opacity:1;
+}
+
+}
+
+/* Fade Up */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+
+0%{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+100%{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* Zoom In */
+
+.zoom-in{
+    animation:zoomIn .8s ease;
+}
+
+@keyframes zoomIn{
+
+0%{
+    transform:scale(.8);
+    opacity:0;
+}
+
+100%{
+    transform:scale(1);
+    opacity:1;
+}
+
+}
+
+/* Slide Left */
+
+.slide-left{
+    animation:slideLeft 1s ease;
+}
+
+@keyframes slideLeft{
+
+0%{
+    transform:translateX(-100px);
+    opacity:0;
+}
+
+100%{
+    transform:translateX(0);
+    opacity:1;
+}
+
+}
+
+/* Slide Right */
+
+.slide-right{
+    animation:slideRight 1s ease;
+}
+
+@keyframes slideRight{
+
+0%{
+    transform:translateX(100px);
+    opacity:0;
+}
+
+100%{
+    transform:translateX(0);
+    opacity:1;
+}
+
+}
+
+/* Hero Floating */
+
+.hero-image img{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+0%{
+    transform:translateY(0);
+}
+
+50%{
+    transform:translateY(-15px);
+}
+
+100%{
+    transform:translateY(0);
+}
+
+}
+
+/* Logo Glow */
+
+.logo img{
+
+    animation:logoGlow 2s infinite;
+
+}
+
+@keyframes logoGlow{
+
+0%{
+    box-shadow:0 0 15px #8A2BE2;
+}
+
+50%{
+    box-shadow:0 0 35px #8A2BE2;
+}
+
+100%{
+    box-shadow:0 0 15px #8A2BE2;
+}
+
+}
+
+/* Card Hover */
+
+.card{
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 30px #8A2BE2;
+
+}
+
+/* Button Animation */
+
+.btn,
+.btn2{
+
+    transition:.4s;
+
+}
+
+.btn:hover,
+.btn2:hover{
+
+    transform:scale(1.05);
+    box-shadow:0 0 30px #8A2BE2;
+
+}
+
+/* Navigation Hover */
+
+nav ul li a{
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#8A2BE2;
+    text-shadow:0 0 15px #8A2BE2;
+
+}
+
+/* Image Hover */
+
+.hero-image img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Smooth Animation */
+
+*{
+
+    transition:.3s;
+
+}
