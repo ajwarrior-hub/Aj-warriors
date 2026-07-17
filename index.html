@@ -1,184 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Warrior</title>
 
-<title>AJ WARRIOR | Official Gaming Website</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/animation.css">
-
-<link rel="icon" type="image/png" href="images/logo.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <!-- Three.js Import -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.166.1/build/three.module.js"
+        }
+    }
+    </script>
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">
-<img src="images/logo.png" alt="AJ WARRIOR Logo">
-<h2>AJ WARRIOR</h2>
+<!-- Loading Screen -->
+<div id="loading">
+    <h1>FOREST WARRIOR</h1>
+    <p>Loading Game...</p>
 </div>
 
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="games.html">Games</a></li>
-<li><a href="achievements.html">Achievements</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<!-- Hero Section -->
-
-<section class="hero">
-
-<div class="hero-text">
-
-<h1>WELCOME TO</h1>
-
-<h2>AJ WARRIOR</h2>
-
-<p>
-Gaming • Live Streaming • Content Creator
-</p>
-
-<a href="https://www.youtube.com/@AJWARRIORS-1321"
-target="_blank"
-class="btn">
-
-Subscribe On YouTube
-
-</a>
-
+<!-- Game Title -->
+<div id="gameTitle">
+    FOREST WARRIOR
 </div>
 
-<div class="hero-image">
-
-<img src="images/banner.png" alt="AJ WARRIOR Banner">
-
+<!-- Health Bar -->
+<div id="healthContainer">
+    <div id="healthBar"></div>
 </div>
 
-</section>
+<!-- Crosshair -->
+<div id="crosshair">+</div>
 
-<!-- About -->
+<!-- Game Canvas -->
+<div id="game"></div>
 
-<section class="about-preview">
-
-<h2>About Me</h2>
-
-<p>
-
-Welcome to AJ WARRIOR Official Gaming Website.
-
-I create Gaming Videos, Live Streams,
-Gameplay Videos and Entertainment Content.
-
-</p>
-
-<a href="about.html" class="btn2">
-
-Read More
-
-</a>
-
-</section>
-
-<!-- Games -->
-
-<section class="games-preview">
-
-<h2>Games I Play</h2>
-
-<div class="game-box">
-
-<div class="card">
-
-<h3>🎮 GTA V</h3>
-
-<p>Open World Adventure Game</p>
-
-</div>
-
-<div class="card">
-
-<h3>🎮 Minecraft</h3>
-
-<p>Creative Sandbox Game</p>
-
-</div>
-
-<div class="card">
-
-<h3>🎮 Roblox</h3>
-
-<p>Multiplayer Adventure Game</p>
-
-</div>
-
-<div class="card">
-
-<h3>🎮 Car Simulator</h3>
-
-<p>Driving & Open World Game</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- YouTube -->
-
-<section class="youtube">
-
-<h2>Official YouTube Channel</h2>
-
-<p>
-
-Subscribe to AJ WARRIOR for Amazing Gaming Videos.
-
-</p>
-
-<a href="https://www.youtube.com/@AJWARRIORS-1321"
-target="_blank"
-class="btn">
-
-Visit My Channel
-
-</a>
-
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-<p>
-
-© 2026 AJ WARRIOR | All Rights Reserved
-
-</p>
-
-</footer>
-
-<script src="js/script.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/animation.js"></script>
+<!-- JavaScript -->
+<script type="module" src="script.js"></script>
 
 </body>
 </html>
+<div id="minimap">
+    <canvas id="mapCanvas"></canvas>
+</div>
